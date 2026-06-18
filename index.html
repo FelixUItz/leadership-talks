@@ -20,12 +20,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Ar
 .hero{background:var(--black);color:var(--white);min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:url(/images/venue-boardroom.jpg) center top/cover no-repeat;opacity:.15}
 .hero-inner{max-width:700px;position:relative;z-index:1}
-.logo-mark{width:80px;height:80px;margin:0 auto 2rem}
-.logo-mark svg{width:100%;height:100%}
+.logo-mark{width:80px;height:auto;margin:0 auto 2rem}
+.logo-mark img{width:100%;height:auto}
 .hero h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;text-transform:uppercase;letter-spacing:.02em;line-height:1.05;margin-bottom:.5rem}
 .hero h1 span{color:var(--red)}
 .hero .subtitle{color:var(--red);font-size:.85rem;text-transform:uppercase;letter-spacing:.25em;font-weight:600;margin-bottom:1.5rem}
-.hero .tagline{font-size:1.15rem;color:#ccc;max-width:500px;margin:0 auto 2.5rem}
+.hero .tagline{font-size:1.15rem;color:#ccc;max-width:550px;margin:0 auto 2.5rem}
 .hero .scroll-hint{display:inline-block;width:1px;height:60px;background:var(--red);animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
 
@@ -56,10 +56,15 @@ p:last-child{margin-bottom:0}
 @media(max-width:768px){.split{grid-template-columns:1fr}.split img{min-height:280px}.split-text{padding:3rem 1.5rem}}
 
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2rem;text-align:center}
-.stat-num{font-size:2.5rem;font-weight:900;color:var(--red)}
-.stat-label{font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;color:#666;margin-top:.25rem}
+.stat-num{font-size:2rem;font-weight:900;color:var(--red)}
+.stat-label{font-size:.85rem;letter-spacing:.02em;color:#666;margin-top:.25rem}
 
-.hosts-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2rem}.host img{width:100%;height:320px;object-fit:cover;object-position:center 20%;display:block;margin-bottom:1.25rem;filter:grayscale(100%)}.host h3{font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--white)}.host p{font-size:.95rem;color:#bbb;margin:0}@media(max-width:600px){.hosts-grid{grid-template-columns:1fr}}
+.hosts-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2rem}
+.host img{width:100%;height:320px;object-fit:cover;object-position:center 20%;display:block;margin-bottom:1.25rem;}
+.host h3{font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--white)}
+.host p{font-size:.95rem;color:#bbb;margin:0}
+@media(max-width:600px){.hosts-grid{grid-template-columns:1fr}}
+
 .cta-btn{display:inline-block;padding:.85rem 2.5rem;background:var(--red);color:var(--white);text-decoration:none;font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:.1em;transition:background .2s}
 .cta-btn:hover{background:#c41a1f}
 
@@ -78,10 +83,10 @@ footer a:hover{color:var(--white)}
 
 <section class="hero">
 <div class="hero-inner">
-<div class="logo-mark"><img src="/images/logo.png" alt="Leadership Talks Vienna" style="width:80px;height:auto"></div>
-<div class="subtitle">Vienna</div>
-<h1>Leadership <span>Talks</span></h1>
-<p class="tagline">Wo Entscheider die Hot Topics für ihre Rolle und Branche definieren.</p>
+
+
+<img src="/images/hero-logo.webp" alt="Leadership Talks Vienna" style="max-width:650px;width:100%;height:auto;margin-bottom:1.5rem">
+<p class="tagline">Wo Entscheiderinnen und Entscheider die Hot Topics f&uuml;r ihre Rolle und Branche definieren.</p>
 <div class="scroll-hint"></div>
 </div>
 </section>
@@ -89,8 +94,8 @@ footer a:hover{color:var(--white)}
 <section>
 <div class="container">
 <h2>Exklusives C-Level-<span>Forum</span></h2>
-<p>Leadership Talks Vienna bringt CEOs, Vorstände und Top-Führungskräfte aus Tourismus, Infrastruktur und Mobilität an einen Tisch. Kein Kongressformat, kein Frontalvortrag — sondern ein kuratierter Abend mit Impulsen, Austausch und konkreten Handlungsableitungen.</p>
-<p>Maximal 20 Teilnehmer:innen. Chatham House Rule. Kein Sales Pitch, keine PR-Statements — nur vertrauensvoller Austausch auf Augenhöhe.</p>
+<p>Leadership Talks bringt CEOs, Vorst&auml;nde und Top-F&uuml;hrungskr&auml;fte aus Tourismus, Infrastruktur und Mobilit&auml;t an einen Tisch. Kein Kongressformat, kein Frontalvortrag — sondern ein kuratierter Abend mit Impulsen, Austausch und konkreten Handlungsableitungen.</p>
+<p>Maximal 20 Teilnehmerinnen und Teilnehmer. Chatham House Rule. Kein Sales Pitch, keine PR-Statements — nur vertrauensvoller Austausch auf Augenh&ouml;he.</p>
 </div>
 </section>
 
@@ -102,7 +107,7 @@ footer a:hover{color:var(--white)}
 <div class="format-grid">
 <div class="format-card">
 <h3>Ankommen</h3>
-<p>Welcome, Kaffee & Drinks, erstes informelles Kennenlernen im Lounge-Setting.</p>
+<p>Welcome, Kaffee &amp; Drinks, erstes informelles Kennenlernen im Lounge-Setting.</p>
 </div>
 <div class="format-card">
 <h3>Keynote Input</h3>
@@ -110,15 +115,15 @@ footer a:hover{color:var(--white)}
 </div>
 <div class="format-card">
 <h3>Leadership Talk</h3>
-<p>Moderiertes Panel mit Vertiefung der Kernthesen. Was bedeutet das für unsere Rolle? Was würdet ihr heute anders machen?</p>
+<p>Moderiertes Panel mit Vertiefung der Kernthesen. Was bedeutet das f&uuml;r unsere Rolle? Was w&uuml;rdet ihr heute anders machen?</p>
 </div>
 <div class="format-card">
 <h3>Offene Diskussion</h3>
-<p>Austausch mit Leitfragen. Am Ende: 5–7 verdichtete Take-Aways als Grundlage für Podcast und Newsletter.</p>
+<p>Austausch mit Leitfragen. Am Ende: 5–7 verdichtete Take-Aways als Grundlage f&uuml;r Podcast und Newsletter.</p>
 </div>
 <div class="format-card">
 <h3>Networking</h3>
-<p>Informeller Ausklang bei Drinks und Fingerfood. Möglichkeit für 1:1-Gespräche mit dem Speaker.</p>
+<p>Informeller Ausklang bei Drinks und Fingerfood. M&ouml;glichkeit f&uuml;r 1:1-Gespr&auml;che mit dem Speaker.</p>
 </div>
 </div>
 </div>
@@ -126,11 +131,11 @@ footer a:hover{color:var(--white)}
 
 <section>
 <div class="container">
-<h2>Für <span>wen</span></h2>
-<p>CEOs, Vorstände, Geschäftsführer:innen und C-Level-Führungskräfte (COO, CFO, CMO, CIO) aus:</p>
+<h2>F&uuml;r <span>wen</span></h2>
+<p>CEOs, Vorst&auml;nde, Gesch&auml;ftsf&uuml;hrerinnen und Gesch&auml;ftsf&uuml;hrer und C-Level-F&uuml;hrungskr&auml;fte (COO, CFO, CMO, CIO) aus:</p>
 <div class="format-grid">
 <div class="format-card">
-<h3>Tourismus & Hospitality</h3>
+<h3>Tourismus &amp; Hospitality</h3>
 <p>Hotels, Destinationen, Seilbahnen, Freizeitwirtschaft.</p>
 </div>
 <div class="format-card">
@@ -138,8 +143,8 @@ footer a:hover{color:var(--white)}
 <p>Energie, Versorgung, Telekommunikation.</p>
 </div>
 <div class="format-card">
-<h3>Mobilität</h3>
-<p>ÖPNV, Bahn, Airlines, Mobilitätsanbieter, Plattformen.</p>
+<h3>Mobilit&auml;t</h3>
+<p>&Ouml;PNV, Bahn, Airlines, Mobilit&auml;tsanbieter, Plattformen.</p>
 </div>
 </div>
 </div>
@@ -150,8 +155,8 @@ footer a:hover{color:var(--white)}
 <img src="/images/venue-innenhof.jpg" alt="Innenhof LOFT1080" loading="lazy">
 <div class="split-text">
 <h2>Das <span>Setting</span></h2>
-<p>LOFT1080, Wien Josefstadt. 90 m² auf zwei Ebenen mit grünem Innenhof. Board-Room-Bestuhlung statt Frontal-Setting.</p>
-<p>Evening Session, 18–21 Uhr. Professionelle Technik, Audio-Mitschnitt, Foto & Video. Ein Raum, der für den vertraulichen Austausch unter Entscheidern gebaut ist.</p>
+<p>LOFT1080, Wien Josefstadt. 90 m&sup2; auf zwei Ebenen mit gr&uuml;nem Innenhof. Board-Room-Bestuhlung statt Frontal-Setting.</p>
+<p>Evening Session, 18–21 Uhr. Professionelle Technik, Audio-Mitschnitt, Foto &amp; Video. Ein Raum, der f&uuml;r den vertraulichen Austausch unter Entscheiderinnen und Entscheidern gemacht ist.</p>
 </div>
 </div>
 </section>
@@ -163,35 +168,34 @@ footer a:hover{color:var(--white)}
 <h2>Die <span>Hosts</span></h2>
 <div class="hosts-grid">
 <div class="host">
-<img src="/images/host-siller.jpg" alt="Hubert J. Siller" loading="lazy">
-<h3>Prof. Hubert J. Siller</h3>
-<p>FH-Professor und Leiter des Department f&uuml;r Tourismus- &amp; Freizeitwirtschaft am MCI Innsbruck. Forschungsschwerpunkte: Leadership, Destinationsentwicklung und Nachhaltigkeit. Keynote Speaker und strategischer Berater.</p>
+<img src="/images/host-siller.webp?v=3" alt="Hubert Siller" loading="lazy">
+<h3>Hubert Siller</h3>
+<p>FH-Professor und Leiter des Department f&uuml;r Tourismus- &amp; Freizeitwirtschaft am MCI Innsbruck. Forschungsschwerpunkte: Leadership, Destinationsentwicklung und Nachhaltigkeit. Renommierter Keynote Speaker, Leadership Coach und strategischer Berater.</p>
 </div>
 <div class="host">
-<img src="/images/host-raffeiner.jpg" alt="Alexander Raffeiner" loading="lazy">
+<img src="/images/host-raffeiner.webp?v=2" alt="Alexander Raffeiner" loading="lazy">
 <h3>Alexander Raffeiner</h3>
-<p>Gr&uuml;nder von Raffeiner Reputation und LOFT1080. &Uuml;ber 20 Jahre Erfahrung in Strategie- und Kommunikationsberatung, Moderation und Sparring f&uuml;r Entscheider. Keynote Speaker und Gastgeber.</p>
+<p>Unternehmer, Gr&uuml;nder von RAFFEINER REPUTATION und LOFT1080, Strategie- und Kommunikationsberater. Erfahrener Moderator und Sparring-Partner in Positionierungs-, Change- und Verhandlungsprozessen. Fokus: klares Leadership, wirksames Stakeholder-Management.</p>
 </div>
 </div>
 </div>
 </section>
-
 
 <section class="bg-light">
 <div class="container">
 <h2>Was bleibt</h2>
 <div class="stats">
 <div>
-<div class="stat-num">20</div>
-<div class="stat-label">Teilnehmer:innen</div>
+<div class="stat-num">Max. 20</div>
+<div class="stat-label">Kolleginnen und Kollegen</div>
 </div>
 <div>
 <div class="stat-num">2,5h</div>
-<div class="stat-label">Programm</div>
+<div class="stat-label">Sparring und neue Perspektiven</div>
 </div>
 <div>
 <div class="stat-num">1</div>
-<div class="stat-label">Abend, der z&auml;hlt</div>
+<div class="stat-label">Abend, der z&auml;hlt und weiterbringt</div>
 </div>
 </div>
 </div>
@@ -206,8 +210,7 @@ footer a:hover{color:var(--white)}
 </section>
 
 <footer>
-<p>Leadership Talks Vienna &middot; Ein Format von Raffeiner Reputation</p>
-<p style="margin-top:.5rem"><a href="https://raffeiner-reputation.com">raffeiner-reputation.com</a> &middot; <a href="https://alexander-raffeiner.com">alexander-raffeiner.com</a> &middot; <a href="https://loft1080.at">loft1080.at</a></p>
+<p>Leadership Talks Vienna &middot; Ein Format von Hubert Siller und Alexander Raffeiner</p>
 <p style="margin-top:.75rem"><a href="/impressum">Impressum</a></p>
 </footer>
 
